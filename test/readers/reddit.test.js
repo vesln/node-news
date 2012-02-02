@@ -19,7 +19,7 @@ var Reddit = require('../../lib/readers/reddit');
 
 describe('Reddit', function() {
   describe('.get()', function() {
-    it('should make an request to hackernews', function(done) {
+    it('should make an request to reddit', function(done) {
       request.stub('get').and.replace(function(url, cb) {
         url.should.eql('http://reddit.com/.json');
         request.get.reset();
@@ -27,18 +27,6 @@ describe('Reddit', function() {
       });
       var reddit = new Reddit;
       reddit.get();
-    });
-    
-    it('should return error if any', function(done) {
-      request.stub('get').and.replace(function(url, cb) {
-        cb(new Error('foo'));
-      });
-      var reddit = new Reddit;
-      reddit.get(function(err) {
-        err.should.be.an.instanceof(Error);
-        request.get.reset();
-        done();
-      });
     });
     
     it('should parse and return the results', function(done) {
