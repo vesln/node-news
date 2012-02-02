@@ -1,6 +1,6 @@
 {
     "name": "news"
-  , "version": "0.0.1"
+  , "version": "0.1.0"
   , "description": "Hacker news and reddit in the CLI."
   , "keywords": ["hacker news", "reddit", "news"]
   , "author": "Veselin Todorov <hi@vesln.com>"

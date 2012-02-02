@@ -1,6 +1,6 @@
 [![Build Status](https://secure.travis-ci.org/vesln/node-news.png)](http://travis-ci.org/vesln/node-news)
 
-# News - Hacker News and Reddit in the CLI.
+# News - Hacker News, Echojs and Reddit in the CLI.
 
 ![screenshot](http://img543.imageshack.us/img543/7872/newsto.png)
 
@@ -9,6 +9,7 @@
 ```   
 $ news hackernews
 $ news reddit
+$ news echojs
 ```
 
 ## Requirements
