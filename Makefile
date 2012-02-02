@@ -1,11 +1,9 @@
-TESTS = test/*.test.js
+TESTS = $(wildcard test/*.test.js) $(wildcard test/readers/*.test.js)
+REPORTER = dot
 
 test:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
-		--reporter dot \
+		--reporter $(REPORTER) \
 		$(TESTS)
-		
-init: 
-	chmod 777 ./data
 
 .PHONY: test init
