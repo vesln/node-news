@@ -1,0 +1,32 @@
+{
+    "name": "news"
+  , "version": "0.0.1"
+  , "description": "Hacker news and reddit in the CLI."
+  , "keywords": ["hacker news", "reddit", "news"]
+  , "author": "Veselin Todorov <hi@vesln.com>"
+  , "dependencies": {
+      "optimist": "0.3.1"
+    , "colors": "0.6.0-1"
+    , "request": "2.9.100"
+  }
+  , "devDependencies": {
+      "mocha": "0.3.3"
+    , "chai": "0.2.4"
+    , "jack": "0.0.0"
+  }
+  , "repository" : {
+      "type" : "git"
+    , "url" : "http://github.com/vesln/node-news.git"
+  }
+  , "homepage": "http://github.com/vesln/node-news"
+  , "scripts": {
+      "test": "make test"
+  }
+  , "main": "./lib/cli"
+  , "bin": {
+      "todo": "./bin/news"
+  }
+  , "engines": { 
+      "node": ">= 0.6.0 < 0.7.0"
+  }
+}
