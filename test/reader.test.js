@@ -20,8 +20,8 @@ var Reader = require('../lib/reader');
 
 var Child = function() {};
 util.inherits(Child, Reader);
-Child.prototype.parse = function() {
-  return ['foo'];
+Child.prototype.parse = function(body, cb) {
+  cb(null, ['foo']);
 };
 
 
