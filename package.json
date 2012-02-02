@@ -26,7 +26,7 @@
   }
   , "main": "./lib/cli"
   , "bin": {
-      "todo": "./bin/news"
+      "news": "./bin/news"
   }
   , "engines": { 
       "node": ">= 0.6.0 < 0.7.0"
