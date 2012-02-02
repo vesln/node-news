@@ -15,18 +15,18 @@ var jack = require('jack');
  * The tested object.
  */
 var request = require('request');
-var Hackernews = require('../../lib/readers/hackernews');
+var Echojs = require('../../lib/readers/echojs');
 
-describe('Hackernews', function() {
+describe('Echojs', function() {
   describe('.get()', function() {
-    it('should make an request to hackernews', function(done) {
+    it('should make an request to echojs', function(done) {
       request.stub('get').and.replace(function(url, cb) {
-        url.should.eql('http://news.ycombinator.com/rss');
+        url.should.eql('http://www.echojs.com/rss');
         request.get.reset();
         done();
       });
-      var hackernews = new Hackernews;
-      hackernews.get();
+      var echojs = new Echojs;
+      echojs.get();
     });
   });
 });
