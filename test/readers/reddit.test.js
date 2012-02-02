@@ -22,6 +22,7 @@ describe('Reddit', function() {
     it('should make an request to hackernews', function(done) {
       request.stub('get').and.replace(function(url, cb) {
         url.should.eql('http://reddit.com/.json');
+        request.get.reset();
         done();
       });
       var reddit = new Reddit;
@@ -35,6 +36,7 @@ describe('Reddit', function() {
       var reddit = new Reddit;
       reddit.get(function(err) {
         err.should.be.an.instanceof(Error);
+        request.get.reset();
         done();
       });
     });
@@ -52,6 +54,7 @@ describe('Reddit', function() {
       reddit.get(function(err, data) {
         (err == null).should.be.true;
         data.should.eql(['foo']);
+        request.get.reset();
         done();
       });
     });
