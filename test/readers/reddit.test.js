@@ -32,7 +32,7 @@ describe('Reddit', function() {
     it('should parse and return the results', function(done) {
       var body = JSON.stringify({
         data: {
-          children: ['foo']
+          children: [{data: {url: 'foo'}}]
         }
       });
       request.stub('get').and.replace(function(url, cb) {
@@ -41,7 +41,7 @@ describe('Reddit', function() {
       var reddit = new Reddit;
       reddit.get(function(err, data) {
         (err == null).should.be.true;
-        data.should.eql(['foo']);
+        data.should.eql([ { url: 'foo', link: 'foo' } ]);
         request.get.reset();
         done();
       });
