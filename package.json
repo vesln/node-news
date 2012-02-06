@@ -11,6 +11,8 @@
     , "redr": "0.0.2"
     , "xml2js": "0.1.13"
     , "word": "0.2.4"
+    , "slnks": "0.0.x"
+    , "async": "0.1.15"
   }
   , "devDependencies": {
       "mocha": "0.3.3"
